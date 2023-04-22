@@ -8,8 +8,8 @@ const WrappedListComponent = ({
   const [selectedIndex, setSelectedIndex] = useState();
   
   useEffect(() => {
-    console.log("Selected Index:", selectedIndex);
-  }, [selectedIndex]);
+    setSelectedIndex()
+  }, [items]);
   
   const handleClick = (index) => {
     if(index === selectedIndex){
