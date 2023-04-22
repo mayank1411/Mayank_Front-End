@@ -11,7 +11,7 @@ In return funnction of the List components the array of objects items is beging 
 Moreover, both of these component is wrapped in React-memo function which stops the re-render of unnecessary states and optimize the application.
 
 
-Q2. What problems / warnings are there with code?
+<h1>Q2. What problems / warnings are there with code?</h1>
 1-	The useState hook is used incorrectly and variable selectedIndex and setSelectedIndex should be interchanged 
 const [selectedIndex, setSelectedIndex] = useState();
 2-	handleClick function should be changed as the index should selected and null when its is clicked again as functionality.
@@ -53,8 +53,7 @@ WrappedListComponent.propTypes = {
 };
 
 
-3. Please fix, optimize, and/or modify the component as much as you think is necessary.
-
+<h1>3. Please fix, optimize, and/or modify the component as much as you think is necessary.</h1>
 ans : 
 Delpyed site : 
 https://mayank-front-end.netlify.app/ 
