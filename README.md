@@ -14,7 +14,7 @@ Moreover, both of these component is wrapped in React-memo function which stops 
 <h1>Q2. What problems / warnings are there with code?</h1>
 1-	The useState hook is used incorrectly and variable selectedIndex and setSelectedIndex should be interchanged 
 
-`**const [selectedIndex, setSelectedIndex] = useState();**`
+```const [selectedIndex, setSelectedIndex] = useState();```
 
 
 
@@ -22,13 +22,13 @@ Moreover, both of these component is wrapped in React-memo function which stops 
   
   
   ```
-  **const handleClick = (index) => {
+  const handleClick = (index) => {
     if(index === selectedIndex){
       setSelectedIndex()
     }else{
       setSelectedIndex(index);
     }
- };**
+ };
  ```
 
 
@@ -38,13 +38,13 @@ Moreover, both of these component is wrapped in React-memo function which stops 
 
 
 ```
-**<SingleListItem
+<SingleListItem
           key={index}
           onClickHandler={() => handleClick(index)}
           text={item.text}
           index={index}
           isSelected={selectedIndex===index}
-        />**
+        />
 ```
 
 
@@ -53,13 +53,13 @@ Moreover, both of these component is wrapped in React-memo function which stops 
 
 
 ```
-**<SingleListItem
+<SingleListItem
           key={index}
           onClickHandler={() => handleClick(index)}
           text={item.text}
           index={index}
           isSelected={selectedIndex===index}
-        />**
+        />
 ```
 
 
@@ -67,17 +67,17 @@ Moreover, both of these component is wrapped in React-memo function which stops 
 
 
 ```
-**WrappedListComponent.propTypes = {
+WrappedListComponent.propTypes = {
   items: PropTypes.arrayOf(PropTypes.shape({
     text: PropTypes.string.isRequired,
   })).isRequired,
-};**
+};
 ```
 
 
 <h1>3. Please fix, optimize, and/or modify the component as much as you think is necessary.</h1>
 ans : 
-**Delpyed site :** 
+**Delpyed site :
 **https://mayank-front-end.netlify.app/** 
 
 
