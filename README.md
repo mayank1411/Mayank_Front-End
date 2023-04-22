@@ -78,7 +78,7 @@ WrappedListComponent.propTypes = {
 <h1>3. Please fix, optimize, and/or modify the component as much as you think is necessary.</h1>
 ans : 
 **Delpyed site :
-**https://mayank-front-end.netlify.app/** 
+https://mayank-front-end.netlify.app/ 
 
 
 
