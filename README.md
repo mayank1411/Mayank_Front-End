@@ -1,4 +1,4 @@
-Q1. Explain what the simple List component does.
+<h1>Q1. Explain what the simple List component does.</h1>
 ANS : 
 List is a function base component which take props named (items) type array of objects in which each object is having a (text) field as type string. The List components also consist of a useState hook name [selectedIndex, setSelectedIndex] and is used to store the index of selected items.
 
@@ -56,7 +56,7 @@ WrappedListComponent.propTypes = {
 3. Please fix, optimize, and/or modify the component as much as you think is necessary.
 
 ans : 
-
+Delpyed site : 
 https://mayank-front-end.netlify.app/ 
 
 
