@@ -13,44 +13,58 @@ Moreover, both of these component is wrapped in React-memo function which stops 
 
 <h1>Q2. What problems / warnings are there with code?</h1>
 1-	The useState hook is used incorrectly and variable selectedIndex and setSelectedIndex should be interchanged 
-const [selectedIndex, setSelectedIndex] = useState();
+
+**const [selectedIndex, setSelectedIndex] = useState();**
+
+
+
 2-	handleClick function should be changed as the index should selected and null when its is clicked again as functionality.
-  const handleClick = (index) => {
+  
+  
+  **const handleClick = (index) => {
     if(index === selectedIndex){
       setSelectedIndex()
     }else{
       setSelectedIndex(index);
     }
- };
+ };**
 
 
 3-	 while mapping items a unique value should be passed as key which will be index or else it will give a warning.
 
-<SingleListItem
+
+
+
+**<SingleListItem
           key={index}
           onClickHandler={() => handleClick(index)}
           text={item.text}
           index={index}
           isSelected={selectedIndex===index}
-        />
+        />**
 
 
 4-	As isSelected should be an Boolean and should be true when selectedIndex is equal to index and false when selectedIndex is not equal to index.
-<SingleListItem
+
+
+
+**<SingleListItem
           key={index}
           onClickHandler={() => handleClick(index)}
           text={item.text}
           index={index}
           isSelected={selectedIndex===index}
-        />
+        />**
 
 
 5-	The array in prop type should Arrayof instead of shapedOf and shapeOf should be shape which gives warning. 
-WrappedListComponent.propTypes = {
+
+
+**WrappedListComponent.propTypes = {
   items: PropTypes.arrayOf(PropTypes.shape({
     text: PropTypes.string.isRequired,
   })).isRequired,
-};
+};**
 
 
 <h1>3. Please fix, optimize, and/or modify the component as much as you think is necessary.</h1>
