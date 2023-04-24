@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import SingleListItem from './SingleList'
 
 const WrappedListComponent = ({
-  items
+  items,setItems
 }) => {
   const [selectedIndex, setSelectedIndex] = useState();
   
@@ -19,6 +19,11 @@ const WrappedListComponent = ({
     }
   };
 
+  const handleDelete = (idToDelete) => {
+    const updatedItems = items.filter((item,index) => index !== idToDelete);
+    setItems(updatedItems);
+  };
+
   return (
     <ul style={{ textAlign: 'left' , listStyle: "none" ,margin:"15px", display:"flex" , alignItems:"center", flexDirection:"column"}}>
       {items.map((item, index) => (
@@ -28,6 +33,7 @@ const WrappedListComponent = ({
           text={item.text}
           index={index}
           isSelected={selectedIndex===index}
+          deleteItem={()=>handleDelete(index)}
         />
       ))}
     </ul>

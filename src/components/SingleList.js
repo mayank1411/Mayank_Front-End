@@ -7,14 +7,16 @@ const WrappedSingleListItem = ({
   isSelected,
   onClickHandler,
   text,
+  deleteItem
 }) => {
   console.log(isSelected);
   return (
     <li
-      style={{ backgroundColor: (isSelected) ? 'green' : 'red' , padding: "25px", margin: "10px", width:"50vw", borderRadius:"10px"}}
-      onClick={()=>onClickHandler(index)}
-    >
+      style={{ backgroundColor: (isSelected) ? 'green' : 'red' , padding: "25px", margin: "10px", width:"50vw", borderRadius:"10px", display:"flex", justifyContent:"space-between"}}
+      onClick={()=>onClickHandler(index)}>
       {text}
+      
+      <i className="fa-solid fa-trash" style={{cursor:"pointer"}} onClick={()=>deleteItem(index)}></i>
     </li>
   );
 };
